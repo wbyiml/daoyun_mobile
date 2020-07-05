@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      我的
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-list>
+ <ion-item [routerLink]="[ '/person']">
+   <ion-avatar>
+     <img [src]="image" />
+   </ion-avatar>
+   <ion-label>{{name}}</ion-label>
+ </ion-item>
+ <ion-item-divider>
+   <ion-label></ion-label>
+ </ion-item-divider>
+ <ion-item>
+   <ion-label>用户协议</ion-label>
+ </ion-item>
+ <ion-item>
+   <ion-label>隐私政策</ion-label>
+   </ion-item>
+
+    <ion-item (click)="presentAlert()">
+        <ion-label>检查更新</ion-label>
+    </ion-item>
+
+    <ion-item href="/set-password">
+        <ion-label>密码重置</ion-label>
+    </ion-item>
+    <ion-item href="/change-phone">
+        <ion-label>更换绑定设备</ion-label>
+    </ion-item>
+    <ion-item href="/waiterhelp">
+      <ion-label>帮助</ion-label>
+  </ion-item>
+
+</ion-list>
+
+<ion-button (click)="presentAlertMultipleButtons()" expand="block" fill="outline" shape="round" color="danger" >
+  退出当前账号
+</ion-button>
+</ion-content>

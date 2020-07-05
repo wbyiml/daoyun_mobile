@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button [routerLink]="[ '/tabs']" (click)="back()">
+      返回
+    </ion-button>
+    <ion-title>签到设置</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>签到设置</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>签到经验值:</ion-label>
+      <ion-input type="text" placeholder="未设置" slot="end" [(ngModel)]="experience"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>签到允许距离(Km):</ion-label>
+      <ion-input type="text" placeholder="未设置" slot="end" [(ngModel)]="distance"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>签到持续时间(Min):</ion-label>
+      <ion-input type="text" placeholder="未设置" slot="end" [(ngModel)]="interval"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+<ion-button (click)="register()" expand="block" fill="clear" shape="round">
+  发起签到
+</ion-button>
+</ion-content>

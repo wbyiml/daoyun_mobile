@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button [routerLink]="[ '/tabs']" (click)="back()">
+      返回
+    </ion-button>
+    <ion-title>班课详情</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>班级 :</ion-label>
+      <ion-input type="text"  slot="end" [(ngModel)]="class.class_name" readonly="readonly"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>课程 :</ion-label>
+      <ion-input type="text" slot="end" [(ngModel)]="class.course" readonly="readonly"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>学期 :</ion-label>
+      <ion-input type="text" slot="end" [(ngModel)]="class.semester" readonly="readonly"></ion-input>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label>经验 :</ion-label>
+      <ion-input type="text"  slot="end" [(ngModel)]="class.experience" readonly="readonly"></ion-input>
+    </ion-item> -->
+
+  </ion-list>
+  <ion-button (click)="outclass()" expand="block" fill="outline" shape="round" color="success" >
+    退出班课
+  </ion-button>
+</ion-content>

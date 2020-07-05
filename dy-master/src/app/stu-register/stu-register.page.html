@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button [routerLink]="[ '/tabs']" (click)="back()">
+      返回
+    </ion-button>
+    <ion-title>签到</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>参与签到</ion-label>
+    </ion-item-divider>
+    <!-- <ion-item>
+      <ion-label>签到经验值: 2</ion-label>
+    </ion-item> -->
+
+  </ion-list>
+  <ion-button (click)="register()" expand="block" fill="clear" shape="round" color="primary">
+    签到
+  </ion-button>
+
+</ion-content>

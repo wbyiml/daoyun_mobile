@@ -1,0 +1,7 @@
+{
+  "name": "dy-teacher",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

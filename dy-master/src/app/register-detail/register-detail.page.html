@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button [routerLink]="[ '/tabs']" (click)="back()">
+      返回
+    </ion-button>
+    <ion-title>签到详情</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-list *ngFor="let item of list">
+
+  <ion-item  >
+    <!-- [routerLink]="[ '/myclass',]" -->
+
+    <ion-label >{{item.time}}    经验值：{{item.experience}}</ion-label>
+
+  </ion-item>
+
+</ion-list>
+
+<ion-content>
+
+</ion-content>

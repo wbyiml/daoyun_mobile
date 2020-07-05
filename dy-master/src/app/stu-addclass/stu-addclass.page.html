@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button [routerLink]="[ '/tabs']" (click)="back()">
+      返回
+    </ion-button>
+    <ion-title>班课详情</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>班级</ion-label>
+      <ion-input type="text" placeholder="未设置" slot="end" [(ngModel)]="class.class_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>课程</ion-label>
+      <ion-input type="text" placeholder="未设置" slot="end" [(ngModel)]="class.course"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>学期</ion-label>
+      <ion-input type="text" placeholder="未设置" slot="end" [(ngModel)]="class.semester"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <ion-button (click)="addtoclass()" expand="block" fill="outline" shape="round" color="success" >
+     加入班课
+  </ion-button>
+</ion-content>

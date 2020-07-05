@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>注册新账号</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines='full' class='mylist'>
+    <!-- <ion-item>
+      <ion-avatar>
+        <img [src]="image" />
+      </ion-avatar>
+      <ion-label >name</ion-label>
+    </ion-item> -->
+    <ion-item-divider>
+
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>手机号</ion-label>
+      <ion-input type="number" placeholder="tel" [(ngModel)]="personinfo.phone" slot="end" required
+      pattern="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,3,5-9]))\d{8}$"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>密码</ion-label>
+      <ion-input type="password" placeholder="password" [(ngModel)]="personinfo.password" slot="end"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>确认密码</ion-label>
+      <ion-input type="password" placeholder="password" [(ngModel)]="personinfo.confirmpassword" slot="end"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="register()" expand="block" fill="outline" shape="round" color="success">
+    注册
+  </ion-button>
+</ion-content>

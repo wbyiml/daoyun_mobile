@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>创建班课</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<i-list>
+  <ion-item-divider>
+    <ion-label></ion-label>
+  </ion-item-divider>
+  <ion-item>
+    <ion-label>班级</ion-label>
+    <ion-input type="text" placeholder="未设置" slot="end" [(ngModel)]="class.class_name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>课程</ion-label>
+    <ion-input type="text" placeholder="未设置" slot="end" [(ngModel)]="class.course"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>学期</ion-label>
+    <ion-input type="text" placeholder="未设置" slot="end" [(ngModel)]="class.semester"></ion-input>
+  </ion-item>
+
+  
+</i-list>
+<ion-button (click)="createclass()" expand="block" fill="outline" shape="round">
+  创建
+</ion-button>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>persondetail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content>
+    <ion-list lines='full' class='mylist'>
+      <!-- <ion-item>
+        <ion-avatar>
+          <img [src]="image" />
+        </ion-avatar>
+        <ion-label >name</ion-label>
+      </ion-item> -->
+      <ion-item-divider>
+  
+      </ion-item-divider>
+      <ion-item lines='full'>
+        <ion-label>姓名</ion-label>
+        <ion-input type="text" placeholder="Awesome Input" slot="end" [(ngModel)]="personinfo.name"></ion-input>
+      </ion-item>
+      <ion-item-divider>
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>身份</ion-label>
+        <ion-select [(ngModel)]="personinfo.identity">
+          <ion-select-option *ngFor="let item of personinfo.identitylist" [value]="item">{{item}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider>
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>学号/工号</ion-label>
+        <ion-input type="text" placeholder="Id number" slot="end" [(ngModel)]="personinfo.idnumber"></ion-input>
+      </ion-item>
+    </ion-list>
+  <ion-button (click)="save()" expand="block" fill="outline" shape="round" color="success">
+    保存
+  </ion-button>
+  </ion-content>
+
